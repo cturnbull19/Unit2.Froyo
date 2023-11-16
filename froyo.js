@@ -8,25 +8,42 @@ let userInputString = prompt(
 // Split the string of numbers into an array of strings.
 let stringArray = userInputString.split(",")
 
-// Converting strings into array
-const numFlavors = [] 
-
-//creating a loop to iterate through the array of flavors
-for (let i = 0; i < stringArray.length; i++) {
-    const str = stringArray[i];
-    numFlavors.push(str); //I want this to keep adding any new flavors
-    console.log(stringArray[i]);
-  }
 //creating an object to keep track of each flavor in the array
-function showFlavorCount(numFlavors) {
-    const flavorCounts = {numFlavors};
+function showFlavorCount(stringArray) {
+    const flavorCounts = {
+        coffee: 0,
+        strawberry: 0,
+        vanilla: 0
+    };
 
 // now counting each flavor
-for(const key of flavorCounts) {
-    if (flavorCounts[key] = flavorCounts[key]) {
-    flavorCounts = flavorCounts[key] + 1
+for(let i=0; i<stringArray.length; i++) {
+    if (stringArray[i] === "coffee") {
+    flavorCounts.coffee = flavorCounts.coffee + 1
+    } else if (stringArray[i] !== "coffee"){
+        flavorCounts.coffee = 1;
     } else {
-        flavorCounts = 1;
+        console.log("error - flavor not available")
+    }
+}
+
+for(let i=0; i<stringArray.length; i++) {
+    if (stringArray[i] === "strawberry") {
+    flavorCounts.strawberry = flavorCounts.strawberry + 1
+    } else if (stringArray[i] !== "strawberry"){
+        flavorCounts.strawberry = 1;
+    } else {
+        console.log("error - flavor not available")
+    }
+}
+
+for(let i=0; i<stringArray.length; i++) {
+    if (stringArray[i] === "vanilla") {
+    flavorCounts.vanilla = flavorCounts.vanilla + 1
+    } else if (stringArray[i] !== "vanilla"){
+        flavorCounts.vanilla = 1;
+    } else {
+        console.log("error - flavor not available")
     }
 }
 //showing a table of how flavors and how many ordered
