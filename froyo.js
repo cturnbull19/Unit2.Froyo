@@ -18,7 +18,8 @@ for (let i = 0; i < stringArray.length; i++) {
     console.log(stringArray[i]);
   }
 //creating an object to keep track of each flavor in the array
-const flavorCounts = {numFlavors};
+function showFlavorCount(numFlavors) {
+    const flavorCounts = {numFlavors};
 
 // now counting each flavor
 for(const key of flavorCounts) {
@@ -28,7 +29,6 @@ for(const key of flavorCounts) {
         flavorCounts = 1;
     }
 }
-
 //showing a table of how flavors and how many ordered
 console.table(flavorCounts);
-
+}
