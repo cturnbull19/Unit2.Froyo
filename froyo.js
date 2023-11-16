@@ -28,6 +28,8 @@ for(const key of flavorCounts) {
         flavorCounts = 1;
     }
 }
-//console.log(flavorCounts[key])
+console.log(flavorCounts[key])
+
+//showing a table of how flavors and how many ordered
 console.table(flavorCounts);
 
