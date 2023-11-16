@@ -8,20 +8,26 @@ let userInputString = prompt(
 // Split the string of numbers into an array of strings.
 let stringArray = userInputString.split(",")
 
-// Creating an object for the array of strings storing count of flavors.
-const flavorCounts = {};
+// Converting strings into array
+const numFlavors = [] 
 
-// Counting the occurrences of each flavor
-const numFlavors = [i]
-let i = " "
+//creating a loop to iterate through the array of flavors
+for (let i = 0; i < stringArray.length; i++) {
+    const str = stringArray[i];
+    numFlavors.push(str); //I want this to keep adding any new flavors
+    console.log(stringArray[i]);
+  }
+//creating an object to keep track of each flavor in the array
+const flavorCounts = {numFlavors};
+
+// now counting each flavor
 for(const key of flavorCounts) {
-    if (flavorCounts[numFlavors] = flavorCounts[numFlavors])
-    flavorCounts=flavorCounts[numFlavors] + 1
-    else {
-        1;
+    if (flavorCounts[key] = flavorCounts[key]) {
+    flavorCounts = flavorCounts[key] + 1
+    } else {
+        flavorCounts = 1;
+    }
 }
-console.log(flavorCounts[key])
-}
-
+//console.log(flavorCounts[key])
 console.table(flavorCounts);
 
